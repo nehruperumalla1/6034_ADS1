@@ -11,89 +11,132 @@
 // You can implement the above API to solve the problem
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for percolation.
+ */
 class Percolation {
-	boolean[][] grid;
-	//int[] array;
-	int c;
-	int n;
-	WQU union;
-	int gridsize;
-	Percolation(int n1) {
-		n = n1;
-		grid = new boolean[n][n];
-		c = 0;
-		union = new WQU((n * n) + 2);
-		gridsize = (n * n);
+    /**
+     * Grid Array for opening.
+     */
+    private boolean[][] grid;
+    /**
+     * ArraySize for Grid Array and Tree Array.
+     */
+    private int arraysize;
+    /**
+     * Object of Weight Quick Union.
+     */
+    private WQU union;
+    /**
+     * Size of the Grid.
+     */
+    private int gridsize;
+    /**
+     * Constructs the object.
+     *
+     * @param      size  The size
+     */
+    Percolation(int size) {
+        arraysize = size;
+        grid = new boolean[arraysize][arraysize];
+        union = new WQU((arraysize * arraysize) + 2);
+        gridsize = (arraysize * arraysize);
 
-	}
-	public int index(int row, int col) {
-		return row * n + col;
-	}
-	public void open(int row, int col) {
-			grid[row - 1][col - 1] = true;
-			c += 1;
-			// for (int i = 0; i < n; i++) {
-			// 	System.out.println(Arrays.toString(grid[i]));
-			// }
-		//Top
-		if (row - 2 >= 0 && isOpen(row - 2, col - 1)) {
-			union.union(index(row - 1, col - 1), index(row - 2, col - 1));
-		}
+    }
+    /**
+     * Index of the Tree Array with Row & Col.
+     *
+     * @param      row   The row
+     * @param      col   The col
+     *
+     * @return     { Returns Index of the Tree Array }
+     */
+    public int index(int row, int col) {
+        return row * arraysize + col;
+    }
+    /**
+     * Opening the Array at given position.
+     *
+     * @param      row   The row
+     * @param      col   The col
+     */
+    public void open(int row, int col) {
+            grid[row - 1][col - 1] = true;
+        //Top
+        if (row - 2 >= 0 && isOpen(row - 2, col - 1)) {
+            union.union(index(row - 1, col - 1), index(row - 2, col - 1));
+        }
 
-		//Bottom
-		if (row < n && isOpen(row, col - 1)) {
-			union.union(index(row - 1, col - 1), index(row, col - 1));
-		}
+        //Bottom
+        if (row < arraysize && isOpen(row, col - 1)) {
+            union.union(index(row - 1, col - 1), index(row, col - 1));
+        }
 
-		//Left
-		if (col - 2 >= 0 && isOpen(row - 1, col - 2)) {
-			union.union(index(row - 1, col - 1), index(row - 1, col - 2));
-		}
+        //Left
+        if (col - 2 >= 0 && isOpen(row - 1, col - 2)) {
+            union.union(index(row - 1, col - 1), index(row - 1, col - 2));
+        }
 
-		//Right
-		if (col < n && isOpen(row - 1, col)) {
-			union.union(index(row - 1, col - 1), index(row - 1, col));
-		}
+        //Right
+        if (col < arraysize && isOpen(row - 1, col)) {
+            union.union(index(row - 1, col - 1), index(row - 1, col));
+        }
 
-		if (row - 1 == 0) {
-			union.union(index(row-1,col-1), gridsize);
-		}
+        if (row - 1 == 0) {
+            union.union(index(row-1,col-1), gridsize);
+        }
 
-		if (row - 1 == n-1) {
-			union.union(index(row-1,col-1), gridsize + 1);
-		}
-	}
+        if (row - 1 == arraysize-1) {
+            union.union(index(row-1,col-1), gridsize + 1);
+        }
+    }
+    /**
+     * Determines if open.
+     *
+     * @param      row   The row
+     * @param      col   The col
+     *
+     * @return     True if open, False otherwise.
+     */
+    public boolean isOpen(int row, int col) {
+        return grid[row][col];
+    }
 
-	// public boolean isFull(int row, int col) {
-
-	// }
-
-	public int numberOfOpenSites() {
-		return c;
-	}
-	public boolean isOpen(int row, int col) {
-		return grid[row][col];
-	}
-
-	public boolean percolates() {
-		return union.isConnected(gridsize, gridsize + 1);
-	}
+    /**
+     * Check whether the Array Percolates on not.
+     *
+     * @return     { Returns Boolean True if Percolates False if Not }
+     */
+    public boolean percolates() {
+        return union.isConnected(gridsize, gridsize + 1);
+    }
 }
 
+/**
+ * Class for solution.
+ */
 public class Solution {
-	Solution() {
-		//Not Using this.
-	}
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		int n = scan.nextInt();
-		Percolation obj = new Percolation(n);
-		while(scan.hasNext()) {
-			int num1 = scan.nextInt();
-			int num2 = scan.nextInt();
-			obj.open(num1, num2);
-		}
-		System.out.println(obj.percolates());
-		
-	}
+    /**
+     * Constructs the object.
+     */
+    Solution() {
+        //Not Using this.
+    }
+
+    /**
+     * Main Method.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int size = scan.nextInt();
+        Percolation obj = new Percolation(size);
+        while(scan.hasNext()) {
+            int num1 = scan.nextInt();
+            int num2 = scan.nextInt();
+            obj.open(num1, num2);
+        }
+        System.out.println(obj.percolates());
+    }
 }
