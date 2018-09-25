@@ -32,6 +32,9 @@ class Percolation {
 	public void open(int row, int col) {
 			grid[row - 1][col - 1] = true;
 			c += 1;
+			// for (int i = 0; i < n; i++) {
+			// 	System.out.println(Arrays.toString(grid[i]));
+			// }
 		//Top
 		if (row - 2 >= 0 && isOpen(row - 2, col - 1)) {
 			union.union(index(row - 1, col - 1), index(row - 2, col - 1));
@@ -53,11 +56,11 @@ class Percolation {
 		}
 
 		if (row - 1 == 0) {
-			union.union(row - 1, gridsize);
+			union.union(index(row-1,col-1), gridsize);
 		}
 
-		if (row - 1 == n) {
-			union.union(row - 1, gridsize + 1);
+		if (row - 1 == n-1) {
+			union.union(index(row-1,col-1), gridsize + 1);
 		}
 	}
 

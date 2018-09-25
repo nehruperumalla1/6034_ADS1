@@ -32,5 +32,6 @@ public class WQU {
 			id[j] = i;
 			sz[i] += sz[j];
 		}
+		// System.out.println(Arrays.toString(id));
 	}
 }
