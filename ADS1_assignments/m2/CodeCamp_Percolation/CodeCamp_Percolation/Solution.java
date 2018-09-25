@@ -1,16 +1,21 @@
 // public class Percolation {
-//    public Percolation(int n)                // create n-by-n grid, with all sites blocked
-//    public    void open(int row, int col)    // open site (row, col) if it is not open already
-//    public boolean isOpen(int row, int col)  // is site (row, col) open?
-//    public boolean isFull(int row, int col)  // is site (row, col) full?
-//    public     int numberOfOpenSites()       // number of open sites
-//    public boolean percolates()              // does the system percolate?
+//    public Percolation(int n)
+                // create n-by-n grid, with all sites blocked
+//    public    void open(int row, int col)    
+                // open site (row, col) if it is not open already
+//    public boolean isOpen(int row, int col)
+                // is site (row, col) open?
+//    public boolean isFull(int row, int col)
+                // is site (row, col) full?
+//    public     int numberOfOpenSites()
+                // number of open sites
+//    public boolean percolates()
+                // does the system percolate?
 // }
 
 
 // You can implement the above API to solve the problem
 import java.util.Scanner;
-import java.util.Arrays;
 /**
  * Class for percolation.
  */
@@ -36,7 +41,7 @@ class Percolation {
      *
      * @param      size  The size
      */
-    Percolation(int size) {
+    Percolation(final int size) {
         arraysize = size;
         grid = new boolean[arraysize][arraysize];
         union = new WQU((arraysize * arraysize) + 2);
@@ -51,7 +56,7 @@ class Percolation {
      *
      * @return     { Returns Index of the Tree Array }
      */
-    public int index(int row, int col) {
+    public int index(final int row, final int col) {
         return row * arraysize + col;
     }
     /**
@@ -60,7 +65,7 @@ class Percolation {
      * @param      row   The row
      * @param      col   The col
      */
-    public void open(int row, int col) {
+    public void open(final int row, final int col) {
             grid[row - 1][col - 1] = true;
         //Top
         if (row - 2 >= 0 && isOpen(row - 2, col - 1)) {
@@ -83,11 +88,11 @@ class Percolation {
         }
 
         if (row - 1 == 0) {
-            union.union(index(row-1,col-1), gridsize);
+            union.union(index(row - 1,col - 1), gridsize);
         }
 
-        if (row - 1 == arraysize-1) {
-            union.union(index(row-1,col-1), gridsize + 1);
+        if (row - 1 == arraysize - 1) {
+            union.union(index(row - 1,col - 1), gridsize + 1);
         }
     }
     /**
@@ -98,7 +103,7 @@ class Percolation {
      *
      * @return     True if open, False otherwise.
      */
-    public boolean isOpen(int row, int col) {
+    public boolean isOpen(final int row, final int col) {
         return grid[row][col];
     }
 
@@ -119,7 +124,7 @@ public class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
         //Not Using this.
     }
 
@@ -128,11 +133,11 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int size = scan.nextInt();
         Percolation obj = new Percolation(size);
-        while(scan.hasNext()) {
+        while (scan.hasNext()) {
             int num1 = scan.nextInt();
             int num2 = scan.nextInt();
             obj.open(num1, num2);
