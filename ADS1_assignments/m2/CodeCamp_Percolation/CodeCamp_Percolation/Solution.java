@@ -1,7 +1,7 @@
 // public class Percolation {
 //    public Percolation(int n)
                 // create n-by-n grid, with all sites blocked
-//    public    void open(int row, int col)    
+//    public    void open(int row, int col)
                 // open site (row, col) if it is not open already
 //    public boolean isOpen(int row, int col)
                 // is site (row, col) open?
@@ -88,11 +88,11 @@ class Percolation {
         }
 
         if (row - 1 == 0) {
-            union.union(index(row - 1,col - 1), gridsize);
+            union.union(index(row - 1, col - 1), gridsize);
         }
 
         if (row - 1 == arraysize - 1) {
-            union.union(index(row - 1,col - 1), gridsize + 1);
+            union.union(index(row - 1, col - 1), gridsize + 1);
         }
     }
     /**
@@ -120,7 +120,7 @@ class Percolation {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
