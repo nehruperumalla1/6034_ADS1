@@ -41,10 +41,8 @@ public class Solution {
 				}
 			}
 		}		
-		for (int j = 0; j < totalsize - 1; j++) {
-			System.out.print(array[j] + ", ");
-		}
-		System.out.println(array[totalsize - 1]);
+		String str = Arrays.toString(array);
+		System.out.println(str.replace("[","").replace("]",""));
 
 	}
 }
