@@ -21,7 +21,8 @@ public class Solution {
 		}
 		int first = 0;
 		int second = 0;
-		for (int i = 0; first<size1&&second<size2; ) {
+		int i = 0;
+		for (i = 0; i < totalsize; i++) {
 			if (first < size1 && second < size2) {
 				if (numarray1[first] < numarray2[second]) {
 					array[i] = numarray1[first];
@@ -30,22 +31,20 @@ public class Solution {
 					array[i] = numarray2[second];
 					second++;
 				}
-				i++;
-			}
-			if (second < size2) {
-				while(second < size2) {
+			} else {
+				if (size1 > size2) {
+					array[i] = numarray1[first];
+					first++;
+				} else {
 					array[i] = numarray2[second];
 					second++;
 				}
-			} 
-			if (first < size1) {
-				while(first < size1) {
-					array[i++] = numarray1[first];
-					first++;
-				}
-			
+			}
+		}		
+		for (int j = 0; j < totalsize - 1; j++) {
+			System.out.print(array[j] + ", ");
 		}
-	}
-		System.out.println(Arrays.toString(array));
+		System.out.println(array[totalsize - 1]);
+
 	}
 }
