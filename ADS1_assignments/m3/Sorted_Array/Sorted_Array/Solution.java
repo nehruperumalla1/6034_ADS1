@@ -6,10 +6,13 @@ public class Solution {
 		int size1 = scan.nextInt();
 		int size2 = scan.nextInt();
 		int totalsize = size1 + size2;
-		String firststring = scan.next();
-		String secondstring = scan.next();
-		String[] array1 = firststring.split(",");
-		String[] array2 = secondstring.split(",");
+		String[] array1 = new String[size1];
+		if (size1 > 0) {
+			array1 = scan.next().split(",");
+		} else {
+			scan.nextLine();
+		}
+		String[] array2 = scan.next().split(",");
 		int[] numarray1 = new int[size1];
 		int[] numarray2 = new int[size2];
 		int[] array = new int[totalsize];
@@ -23,7 +26,7 @@ public class Solution {
 		int second = 0;
 		int i = 0;
 		for (i = 0; i < totalsize; i++) {
-			if (first < size1 && second < size2) {
+			if (first < size1 && second < size2 && size1 > 0 && size2 > 0) {
 				if (numarray1[first] < numarray2[second]) {
 					array[i] = numarray1[first];
 					first++;
@@ -42,7 +45,6 @@ public class Solution {
 			}
 		}		
 		String str = Arrays.toString(array);
-		System.out.println(str.replace("[","").replace("]",""));
-
+		System.out.println(str.replace("[","").replace("]","").replace(", ",","));
 	}
 }
