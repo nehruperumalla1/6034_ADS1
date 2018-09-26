@@ -5,11 +5,17 @@ import java.util.Arrays;
  */
 public class Solution {
     /**
+     * Constructs the Object.
+     */
+    private Solution() {
+        //Solution.
+    }
+    /**
      * Main Method.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int arraysize = scan.nextInt();
         int[] array = new int[arraysize];
@@ -23,7 +29,7 @@ public class Solution {
         for (int i = 0; i < arraysize; i++) {
             j = i + 1;
             k = arraysize - 1;
-            while(j < k) {
+            while (j < k) {
                 if (array[i] + array[j] + array[k] < 0) {
                     j += 1;
                 } else if (array[i] + array[j] + array[k] > 0) {
