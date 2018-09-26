@@ -3,7 +3,7 @@ import java.util.Arrays;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -11,7 +11,7 @@ public class Solution {
         //Solution.
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
@@ -57,7 +57,7 @@ public class Solution {
                     second++;
                 }
             }
-        }       
+        }
         String str = Arrays.toString(array);
         System.out.println(str.replace("[", "").replace("]", "").
             replace(", ", ","));
