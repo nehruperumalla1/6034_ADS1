@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -11,7 +10,7 @@ class CheckBalance {
      *
      * @param      str   The string
      */
-    public void check(String str) {
+    public void check(final String str) {
         //String str = checkstr.getParentheses();
         char[] array = new char[str.length()];
         for (int i = 0; i < str.length(); i++) {
@@ -23,7 +22,7 @@ class CheckBalance {
             if (array[i] == '{' || array[i] == '(' || array[i] == '[') {
                 stack[size] = array[i];
                 size++;
-            } else if(size > 0) {
+            } else if (size > 0) {
                 if (array[i] == '}' && stack[size - 1] == '{') {
                     size--;
                 } else if (array[i] == ']' && stack[size - 1] == '[') {
@@ -45,7 +44,7 @@ class CheckBalance {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the Object.
      */
@@ -57,7 +56,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         CheckBalance cb = new CheckBalance();
         int n = scan.nextInt();
