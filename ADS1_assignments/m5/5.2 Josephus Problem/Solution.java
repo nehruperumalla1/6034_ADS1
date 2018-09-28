@@ -1,11 +1,14 @@
 import java.util.Scanner;
+import java.util.Arrays;
 public class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int num = scan.nextInt();
+		scan.nextLine();
 		for (int i = 0; i < num; i++) {
 			Operations op = new Operations();
-			String[] jos = scan.next().split(",");
+			String jose = scan.nextLine();
+			String[] jos = jose.split(" ");
 			int k = Integer.parseInt(jos[0]);
 			int m = Integer.parseInt(jos[1]);
 			for (int j = 0; j < k; j++) {
