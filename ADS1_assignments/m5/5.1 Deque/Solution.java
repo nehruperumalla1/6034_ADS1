@@ -34,7 +34,7 @@ public final class Solution {
                     op.popAtTail();
                 break;
                 case "size":
-                System.out.println(op.size());  
+                System.out.println(op.size());
                 break;
                 default:
                 break;
