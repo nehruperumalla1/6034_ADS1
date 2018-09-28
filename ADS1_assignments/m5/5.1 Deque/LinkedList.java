@@ -28,10 +28,12 @@ class Operations {
         if (head == null) {
             head = start;
             tail = start;
+            System.out.println(printList());
             return;
         }
         start.setAddress(head);
         head = start;
+        System.out.println(printList());
         return;
     }
 
@@ -59,6 +61,7 @@ class Operations {
         tail.next = end;
         tail = end;
         size++;
+        System.out.println(printList());
     }
 
     public void popAtHead() {
@@ -70,6 +73,7 @@ class Operations {
         head = head.getAddress();
         temp = null;
         size--;
+        System.out.println(printList());
     }
 
     public void popAtTail() {
@@ -85,8 +89,8 @@ class Operations {
         tail = temp;
         temp.next = null;
         size--;
+        System.out.println(printList());
     }
-
     public void deleteAfterElement(int data) {
         Node temp = head;
         while (temp.data != data) {
@@ -95,15 +99,18 @@ class Operations {
         temp.next = temp.next.next;
         size--;
     }
-    public void printList() {
-        if (size == 0) return;
+    public String printList() {
         Node temp = head;
-        System.out.print("[");
-        while (temp.next != null) {
-            System.out.print(temp.data + ", ");
-            temp = temp.getAddress();
+        String str = "[";
+        if (size > 0) {
+            while (temp.next != null) {
+                str += temp.data + ", ";
+                temp = temp.getAddress();
+            }
+            str += temp.data;
         }
-        System.out.println(temp.data + "]");
+        str += "]";
+        return str;
     }
     public int size() {
         return size;
