@@ -123,27 +123,6 @@ class Operations {
     public int size() {
         return size;
     }
-
-    public int[] josephus(int m, int size) {
-        int[] arr = new int[size];
-        Node temp = head;
-        int counter = 1;
-        int i = 0;
-        while (temp.next != null) {
-            while (counter != m) {
-                insertAtTail(temp.data);
-                temp = temp.next;
-                popAtHead();
-                counter++;
-            }
-        arr[i++] = temp.data;
-        temp = temp.next;
-        counter = 1;
-        popAtHead();
-        }
-        arr[i++] = temp.data;
-        return arr;
-    }
 }
 
 public class LinkedList {
