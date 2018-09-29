@@ -56,9 +56,21 @@ final class AddLargeNumbers {
     public static LinkedList addLargeNumbers(
         final LinkedList list1, final LinkedList list2) {
         LinkedList sum = new LinkedList();
+        int diff = 0;
+        if (list1.size() > list2.size()) {
+            diff = list1.size() - list2.size();
+            for (int i = 0; i < diff; i++) {
+                list2.insertAtHead(0);
+            }
+        } else if (list2.size() > list1.size()) {
+            diff = list2.size() - list1.size();
+            for (int i = 0; i < diff; i++) {
+                list1.insertAtHead(0);
+            }
+        }
+        Node temphead = list2.head;
         Node temp1 = list1.tail;
         Node temp2 = list2.tail;
-        Node temphead = list1.head;
         String str = "";
         int num1 = 0;
         int carry = 0;
