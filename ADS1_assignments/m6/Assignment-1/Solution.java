@@ -1,7 +1,17 @@
 import java.util.Scanner;
 
+/**
+ * Class for add large numbers.
+ */
 class AddLargeNumbers {
-    public static LinkedList numberToDigits(String number) {
+    /**
+     * Numbers To Digits.
+     *
+     * @param      number  The number
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static LinkedList numberToDigits(final String number) {
         LinkedList op = new LinkedList();
         String[] numbers = number.split("",number.length());
         for (int i = 0; i < numbers.length; i++) {
@@ -11,7 +21,14 @@ class AddLargeNumbers {
         return op;
     }
 
-    public static String digitsToNumber(LinkedList list) {
+    /**
+     * Digits To Numbers.
+     *
+     * @param      list  The list
+     *
+     * @return     { String Returns }
+     */
+    public static String digitsToNumber(final LinkedList list) {
         Node temp = list.head;
         String str = "";
         while (temp.getNext() != null) {
@@ -22,7 +39,15 @@ class AddLargeNumbers {
         return str;
     }
 
-    public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
+    /**
+     * Adds large numbers.
+     *
+     * @param      list1  The list 1
+     * @param      list2  The list 2
+     *
+     * @return     { Linked List Returns }
+     */
+    public static LinkedList addLargeNumbers(final LinkedList list1, final LinkedList list2) {
         LinkedList sum = new LinkedList();
         Node temp1 = list1.tail;
         Node temp2 = list2.tail;
@@ -34,7 +59,7 @@ class AddLargeNumbers {
         String[] nums = null;
         while (temphead != null) {
             int add = temp1.getData() + temp2.getData();
-            if (add > 9) {
+            if (add > 2 + 2 + 2 + 2 + 1) {
                 str = Integer.toString(add);
                 nums = str.split("", str.length());
                 num1 = Integer.parseInt(nums[1]);
@@ -57,27 +82,46 @@ class AddLargeNumbers {
     }
 }
 
-public class Solution {
-    public static void main(String[] args) {
+/**
+ * Class for solution.
+ */
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+    //Solution
+    }
+    /**
+     * Main Method For Adding Number,
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         String p = sc.nextLine();
         String q = sc.nextLine();
-        switch(input){
+        switch (input) {
             case "numberToDigits":
                 LinkedList pDigits = AddLargeNumbers.numberToDigits(p);
                 LinkedList qDigits = AddLargeNumbers.numberToDigits(q);
-                System.out.println(AddLargeNumbers.digitsToNumber(pDigits));
-                System.out.println(AddLargeNumbers.digitsToNumber(qDigits));
+                System.out.println(AddLargeNumbers.digitsToNumber(
+                    pDigits));
+                System.out.println(AddLargeNumbers.digitsToNumber(
+                    qDigits));
                 break;
 
             case "addLargeNumbers":
                 pDigits = AddLargeNumbers.numberToDigits(p);
                 qDigits = AddLargeNumbers.numberToDigits(q);
-                LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
-                System.out.println(AddLargeNumbers.digitsToNumber(result));
+                LinkedList result = AddLargeNumbers.addLargeNumbers(
+                    pDigits, qDigits);
+                System.out.println(AddLargeNumbers.digitsToNumber(
+                    result));
                 break;
+            default:
+            break;
         }
     }
-    
 }
