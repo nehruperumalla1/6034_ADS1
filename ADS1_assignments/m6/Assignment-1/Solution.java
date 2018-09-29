@@ -5,6 +5,12 @@ import java.util.Scanner;
  */
 class AddLargeNumbers {
     /**
+     * Constructs the object.
+     */
+    private AddLargeNumbers() {
+        //not Using This.
+    }
+    /**
      * Numbers To Digits.
      *
      * @param      number  The number
@@ -13,7 +19,7 @@ class AddLargeNumbers {
      */
     public static LinkedList numberToDigits(final String number) {
         LinkedList op = new LinkedList();
-        String[] numbers = number.split("",number.length());
+        String[] numbers = number.split("", number.length());
         for (int i = 0; i < numbers.length; i++) {
             int num = Integer.parseInt(numbers[i]);
             op.insertAtTail(num);
@@ -47,7 +53,8 @@ class AddLargeNumbers {
      *
      * @return     { Linked List Returns }
      */
-    public static LinkedList addLargeNumbers(final LinkedList list1, final LinkedList list2) {
+    public static LinkedList addLargeNumbers(
+        final LinkedList list1, final LinkedList list2) {
         LinkedList sum = new LinkedList();
         Node temp1 = list1.tail;
         Node temp2 = list2.tail;
@@ -93,7 +100,7 @@ public final class Solution {
     //Solution
     }
     /**
-     * Main Method For Adding Number,
+     * Main Method For Adding Number.
      *
      * @param      args  The arguments
      */
