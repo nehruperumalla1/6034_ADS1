@@ -49,6 +49,12 @@ public class LinkedList {
     }
 
     public void popAtTail() {
+        if(size == 1){
+            size--;
+            head = null;
+            tail = null;
+            return;
+        }
         Node temp = head;
         while (temp.getNext().getNext() != null) {
             temp = temp.getNext();
@@ -64,7 +70,7 @@ public class LinkedList {
         return tail.getData();
     }
 
-     public void insertAtHead(int data) {
+    public void insertAtHead(int data) {
         Node start = new Node(data);
         size++;
         if (head == null) {
@@ -96,6 +102,15 @@ public class LinkedList {
         Node temp = head;
         while (temp != null) {
             System.out.println(temp.getData());
+            temp = temp.getNext();
+        }
+    }
+
+
+    public void display(){
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp+" == "+temp.getData()+" | "+temp.getNext()+" -->");
             temp = temp.getNext();
         }
     }

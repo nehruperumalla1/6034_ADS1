@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Class for add large numbers.
@@ -64,11 +64,11 @@ final class AddLargeNumbers {
         int carry = 0;
         int replace = 0;
         String[] nums = null;
-        while (temphead != null) {
+        while (temphead.getNext() != null) {
             int add = temp1.getData() + temp2.getData();
             if (add > 2 + 2 + 2 + 2 + 1) {
                 str = Integer.toString(add);
-                nums = str.split("", str.length());
+                nums = str.split("");
                 num1 = Integer.parseInt(nums[1]);
                 carry = Integer.parseInt(nums[0]);
                 sum.insertAtHead(num1);
@@ -77,14 +77,17 @@ final class AddLargeNumbers {
                 replace = list1.eleAtTail() + carry;
                 list1.popAtTail();
                 list1.insertAtTail(replace);
-                System.out.println(num1);
             } else {
                 sum.insertAtHead(add);
                 list1.popAtTail();
                 list2.popAtTail();
             }
-
+            temp1 = list1.tail;
+            temp2 = list2.tail;
+            temphead = list1.head;
         }
+        int k = temp1.getData() + temp2.getData();
+        sum.insertAtHead(k);
         return sum;
     }
 }
@@ -121,6 +124,7 @@ public final class Solution {
 
             case "addLargeNumbers":
                 pDigits = AddLargeNumbers.numberToDigits(p);
+                // pDigits.display();
                 qDigits = AddLargeNumbers.numberToDigits(q);
                 LinkedList result = AddLargeNumbers.addLargeNumbers(
                     pDigits, qDigits);
