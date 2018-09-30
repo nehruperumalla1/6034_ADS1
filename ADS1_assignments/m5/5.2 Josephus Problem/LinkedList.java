@@ -107,18 +107,26 @@ class Operations {
         temp.next = temp.next.next;
         size--;
     }
-    public String printList() {
+
+    public int[] josephus(int m, int size) {
+        int[] arr = new int[size];
         Node temp = head;
-        String str = "[";
-        if (size > 0) {
-            while (temp.next != null) {
-                str += temp.data + ", ";
-                temp = temp.getAddress();
+        int counter = 1;
+        int i = 0;
+        while (temp.next != null) {
+            while (counter != m) {
+                insertAtTail(temp.data);
+                temp = temp.next;
+                popAtHead();
+                counter++;
             }
-            str += temp.data;
+        arr[i++] = temp.data;
+        temp = temp.next;
+        counter = 1;
+        popAtHead();
         }
-        str += "]";
-        return str;
+        arr[i++] = temp.data;
+        return arr;
     }
     public int size() {
         return size;
