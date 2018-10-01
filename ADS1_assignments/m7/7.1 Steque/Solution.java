@@ -84,40 +84,39 @@ class LinkedList {
 
     /**
      * Push Method to Push the elements to LinkedList.
+     * Time Complexity for Push Operation is O(1).
      *
      * @param      data  The data
      */
     public void push(final int data) {
         Node start = new Node(data);
         size++;
-        while (head == null) {
+        if (head == null) {
             head = start;
             tail = start;
-            printList();
             return;
         }
         start.setNext(head);
         head = start;
-        printList();
     }
 
     /**
      * Pop Method is used to Pop the Elements from the LinkedList.
+     * Time Cmplexity for Pop Operation is O(1).
      */
     public void pop() {
         if (size() == 0) {
-            System.out.println("Steque is empty.");
             return;
         }
         Node temp = head;
         head = head.getNext();
         temp.setNext(null);
         size--;
-        printList();
     }
 
     /**
      * Enqueue method to Enqueue elements to LinkedList.
+     * Time Complexity for Enqueue is O(1).
      *
      * @param      data  The data
      */
@@ -127,12 +126,10 @@ class LinkedList {
         if (head == null) {
             head = end;
             tail = end;
-            printList();
             return;
         }
         tail.setNext(end);
         tail = end;
-        printList();
     }
 
     /**
@@ -153,6 +150,7 @@ class LinkedList {
     }
     /**
      * { Prints the LinkedList Values }.
+     * Time Complexity for Print is O(N).
      */
     public void printList() {
         Node temp = head;
@@ -180,6 +178,7 @@ public final class Solution {
     }
     /**
      * Main Method for Steque for Push, Pop, Enqueue.
+     * Time Complexity for while is O(N).
      *
      * @param      args  The arguments
      */
@@ -200,13 +199,16 @@ public final class Solution {
                 case "push":
                     listobj.push(Integer.parseInt(
                         operation[1]));
+                    listobj.printList();
                 break;
                 case "pop":
                     listobj.pop();
+                    listobj.printList();
                 break;
                 case "enqueue":
                     listobj.enqueue(Integer.parseInt(
                         operation[1]));
+                    listobj.printList();
                 break;
                 default:
                 break;
