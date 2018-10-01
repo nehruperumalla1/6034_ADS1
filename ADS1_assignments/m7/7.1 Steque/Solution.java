@@ -151,6 +151,7 @@ class LinkedList {
     /**
      * { Prints the LinkedList Values }.
      * Time Complexity for Print is O(N).
+     * While loop is Iterating over N elements in the Linked List.
      */
     public void printList() {
         Node temp = head;
@@ -179,6 +180,7 @@ public final class Solution {
     /**
      * Main Method for Steque for Push, Pop, Enqueue.
      * Time Complexity for while is O(N).
+     * While 
      *
      * @param      args  The arguments
      */
@@ -199,15 +201,18 @@ public final class Solution {
                 case "push":
                     listobj.push(Integer.parseInt(
                         operation[1]));
+                    //Complexity of PrintList method is O(N).
                     listobj.printList();
                 break;
                 case "pop":
                     listobj.pop();
+                    //Complexity of PrintList method is O(N).
                     listobj.printList();
                 break;
                 case "enqueue":
                     listobj.enqueue(Integer.parseInt(
                         operation[1]));
+                    //Complexity of PrintList method is O(N).
                     listobj.printList();
                 break;
                 default:
