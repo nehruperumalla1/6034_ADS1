@@ -180,7 +180,7 @@ public final class Solution {
     /**
      * Main Method for Steque for Push, Pop, Enqueue.
      * Time Complexity for while is O(N).
-     * While 
+     * While loop iterates until when there is an Input. 
      *
      * @param      args  The arguments
      */
