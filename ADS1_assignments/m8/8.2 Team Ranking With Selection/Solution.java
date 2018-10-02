@@ -98,7 +98,7 @@ class LeadBoard {
      * Constructs the object.
      */
     LeadBoard() {
-        teams = new TeamInfo[5];
+        teams = new TeamInfo[1];
         size = 0;
     }
 
