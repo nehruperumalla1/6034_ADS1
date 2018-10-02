@@ -86,6 +86,10 @@ class SelectionSort {
     /**
      * Sorting of TeamInfo Objects based on Wins, losses, draws
      * using selection sort.
+     * Complexity of Selection Sort is O(N^2).
+     * Because It uses nested loops.
+     * One for loop and a while loop
+     * So the complexity would be O(N^2).
      *
      * @param      teams  The teams
      *
@@ -158,6 +162,7 @@ class LeadBoard {
 
     /**
      * Adds a team to Object Array.
+     * Complexity of Add is O(1).
      *
      * @param      team  The team
      */
@@ -169,6 +174,7 @@ class LeadBoard {
     }
     /**
      * To Print the Team Names after sorting.
+     * Complexity of Print is O(N).
      */
     public void print() {
         TeamInfo[] sortedteams = sort.selectsort(teams);
@@ -193,6 +199,8 @@ public final class Solution {
     }
     /**
      * Main Method for Sorting the Teams using Selection Sort.
+     * The complexity of main method is O(N).
+     * Because it iterates whenever it has an input.
      *
      * @param      args  The arguments
      */
