@@ -115,7 +115,8 @@ class SelectionSort {
      *
      * @return     { Returns the array after swapping the objects }
      */
-    public TeamInfo[] exchange(final TeamInfo[] teams, final int min, final int index) {
+    public TeamInfo[] exchange(final TeamInfo[] teams, final int min,
+                                final int index) {
         TeamInfo temp = teams[min];
         teams[min] = teams[index];
         teams[index] = temp;
