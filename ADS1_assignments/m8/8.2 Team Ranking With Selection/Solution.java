@@ -89,8 +89,8 @@ class InsertionSort {
 			while (j >= 0 && value == -1) {
 				teams[j + 1] = teams[j];
 				j -= 1;
-				if (j > 0) {
-					value = teams[i].compareTo(teams[j]);
+				if (j >= 0) {
+					value = team.compareTo(teams[j]);
 				}
 			}
 			teams[j + 1] = team;
