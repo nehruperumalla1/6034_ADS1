@@ -202,7 +202,7 @@ public final class Solution {
         while (scan.hasNext()) {
             info = scan.nextLine().split(",");
             cricketobj.addTeam(new TeamInfo(info[0], Integer.parseInt(info[1]),
-                Integer.parseInt(info[2]), Integer.parseInt(info[2 + 2 + 1])));
+                Integer.parseInt(info[2]), Integer.parseInt(info[2 + 1])));
         }
         cricketobj.print();
     }
