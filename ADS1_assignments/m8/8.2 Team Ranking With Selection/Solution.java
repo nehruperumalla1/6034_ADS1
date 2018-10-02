@@ -28,7 +28,7 @@ class TeamInfo {
      * @param      lost  The lost
      * @param      draw  The draw
      */
-    TeamInfo(String team, int won, int lost, int draw) {
+    TeamInfo(final String team, final int won, final int lost, final int draw) {
         name = team;
         wins = won;
         losses = lost;
@@ -42,21 +42,19 @@ class TeamInfo {
      *
      * @return     { description_of_the_return_value }
      */
-    public int compareTo(TeamInfo that) {
+    public int compareTo(final TeamInfo that) {
         if (this.wins < that.wins) {
             return 1;
         }
         if (this.wins > that.wins) {
             return -1;
-        }
-        else {
+        } else {
             if (this.losses < that.losses) {
                 return -1;
             }
             if (this.losses > that.losses) {
                 return 1;
-            }
-            else {
+            } else {
                 if (this.draws < that.draws) {
                     return 1;
                 }
@@ -117,7 +115,7 @@ class LeadBoard {
      *
      * @param      team  The team
      */
-    public void addTeam(TeamInfo team) {
+    public void addTeam(final TeamInfo team) {
         if (size == teams.length) {
             resize();
         }
@@ -156,12 +154,12 @@ class InsertionSort {
      * The for loop iterates N times.
      * The while loop iterates N times in the Worst Case.
      * Then the Complexity would be O(N^2).
-     * 
+     *
      * @param      teams  The teams
      *
      * @return     { It returns Sorted Object Array }.
      */
-    public TeamInfo[] sorting(TeamInfo[] teams) {
+    public TeamInfo[] sorting(final TeamInfo[] teams) {
         int j = 0;
         for (int i = 1; i < teams.length; i++) {
             TeamInfo team = teams[i];
@@ -175,7 +173,7 @@ class InsertionSort {
                 }
             }
             teams[j + 1] = team;
-        }   
+        }
         return teams;
     }
 }
@@ -184,21 +182,27 @@ class InsertionSort {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //Not Using this Constrcutor.
+    }
     /**
      * Main Method for Sorting Teams Using Insertion Sort.
      * Complexity for Main Method is O(N).
-     * 
+     *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         LeadBoard cricketobj = new LeadBoard();
         Scanner scan = new Scanner(System.in);
         String[] info = null;
         while (scan.hasNext()) {
             info = scan.nextLine().split(",");
-            TeamInfo team = new TeamInfo(info[0], Integer.parseInt(info[1])
-                , Integer.parseInt(info[2]), Integer.parseInt(info[2 + 1]));
+           TeamInfo team = new TeamInfo(info[0], Integer.parseInt(info[1]),
+                Integer.parseInt(info[2]), Integer.parseInt(info[2 + 1]));
 
 
             cricketobj.addTeam(team);
