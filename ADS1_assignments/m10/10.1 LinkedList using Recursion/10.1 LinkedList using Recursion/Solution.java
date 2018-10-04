@@ -68,6 +68,7 @@ class LinkedListRec {
 	int counter;
 	LinkedListRec() {
 		head = null;
+		before = null;
 		counter = 1;
 		size = 0;
 	}
@@ -110,6 +111,7 @@ class LinkedListRec {
 		before = curr;
 		if (after == null) {
 			head = curr;
+			before = null;
 			return ;
 		}
 		curr = after;
