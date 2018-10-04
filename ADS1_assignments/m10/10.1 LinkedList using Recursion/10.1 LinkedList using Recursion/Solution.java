@@ -74,7 +74,7 @@ class LinkedListRec {
 
 	public void insertAt(int pos, int value) throws Exception {
 		Node position = new Node(value);
-		if (size < pos) {
+		if (size < pos && pos < 0) {
 			throw new Exception("Can't insert at this position.");
 		}
 		if (head == null) {
