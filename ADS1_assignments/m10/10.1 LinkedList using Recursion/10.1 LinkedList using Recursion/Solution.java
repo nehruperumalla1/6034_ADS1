@@ -75,7 +75,7 @@ class LinkedListRec {
      */
     private Node before;
     /**
-     * After Node points to right Node to Curr Node in the ist
+     * After Node points to right Node to Curr Node in the List.
      */
     private Node after;
     /**
@@ -104,7 +104,7 @@ class LinkedListRec {
      *
      * @throws     Exception  { If pos is invalid }
      */
-    public void insertAt(int pos, int value) throws Exception {
+    public void insertAt(final int pos, final int value) throws Exception {
         Node position = new Node(value);
         if (size < pos || pos < 0) {
             throw new Exception("Can't insert at this position.");
@@ -148,7 +148,7 @@ class LinkedListRec {
         if (after == null) {
             head = curr;
             before = null;
-            return ;
+            return;
         }
         curr = after;
         reverse();
@@ -170,13 +170,19 @@ class LinkedListRec {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //Not Using this Constructor.
+    }
     /**
      * Main Method for implementing LinkedList Using Recursion.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         LinkedListRec list = new LinkedListRec();
         Scanner scan = new Scanner(System.in);
         while (scan.hasNext()) {
@@ -184,9 +190,10 @@ public class Solution {
             switch (tokens[0]) {
                 case "insertAt":
                 try {
-                    list.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                    list.insertAt(Integer.parseInt(tokens[1]),
+                        Integer.parseInt(tokens[2]));
                     list.printList();
-                } catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                 break;
@@ -194,7 +201,7 @@ public class Solution {
                 try {
                     list.reverse();
                     list.printList();
-                } catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                 break;

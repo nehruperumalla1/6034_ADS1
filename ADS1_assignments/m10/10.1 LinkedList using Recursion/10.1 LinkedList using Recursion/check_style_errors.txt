@@ -1,12 +1,2 @@
 Starting audit...
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:77: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:107:26: Parameter pos should be final. [FinalParameters]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:107:35: Parameter value should be final. [FinalParameters]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:151:19: ';' is preceded with whitespace. [NoWhitespaceBefore]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:173:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:179:29: Parameter args should be final. [FinalParameters]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:187: Line is longer than 80 characters (found 92). [LineLength]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:189:24: 'catch' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:197:24: 'catch' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 9 errors.
