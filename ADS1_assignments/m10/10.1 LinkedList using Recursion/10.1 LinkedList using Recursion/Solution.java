@@ -109,6 +109,7 @@ class LinkedListRec {
 		curr.setNext(before);
 		before = curr;
 		if (after == null) {
+			head = curr;
 			return ;
 		}
 		curr = after;
