@@ -1,0 +1,13 @@
+Factorial using Recursion
+
+fact(int n) {
+	if (n == 1) {
+		return 1;
+	}
+	return n * fact(n - 1);
+}
+
+
+If we need to find the factorial of 5
+The complexity will be O(N).
+It traverses through the methods N times based upon the input given.
