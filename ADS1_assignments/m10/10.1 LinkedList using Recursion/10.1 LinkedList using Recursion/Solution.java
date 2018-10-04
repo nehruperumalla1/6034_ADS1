@@ -98,6 +98,11 @@ class LinkedListRec {
 
     /**
      * Inserting value at Particaular Location Using Recursion.
+     * Complexity of insertAt is O(N).
+     * The recursion traverses based on the Position.
+     * The worst case of position would be N.
+     * Then it will traverse through N elements
+     * Then worst case complexity would be O(N).
      *
      * @param      pos        The position
      * @param      value      The value
@@ -135,6 +140,9 @@ class LinkedListRec {
 
     /**
      * Reverse the Linked List using recursion.
+     * The complexity of reverse Method is O(N).
+     * Because it reverses all elements from first to last.
+     * Then complexity would be O(N).
      *
      * @throws     Exception  { Reversing if Size is 0 }
      */
@@ -156,6 +164,9 @@ class LinkedListRec {
 
     /**
      * It is used to print the Linked List.
+     * For printing complexity would be O(N).
+     * It iterates through out the List and prints all elements
+     * Then its complexity would be O(N).
      */
     public void printList() {
         while (curr.getNext() != null) {
