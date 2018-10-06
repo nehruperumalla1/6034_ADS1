@@ -25,21 +25,8 @@ Starting audit...
 [ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:52:28: Parameter s1 should be final. [FinalParameters]
 [ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:52:44: Parameter s2 should be final. [FinalParameters]
 [ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:64: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:76: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:80: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:84: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:88: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:92: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:96: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:100: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:104: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:108: First sentence should end with a period. [JavadocStyle]
 [ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:112:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:112:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:126: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:185: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:197: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:212: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:228:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m12\Assignment-1\Solution.java:229: First sentence should end with a period. [JavadocStyle]
 Audit done.
-Checkstyle ends with 42 errors.
+Checkstyle ends with 29 errors.

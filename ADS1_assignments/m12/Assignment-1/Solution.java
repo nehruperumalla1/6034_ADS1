@@ -74,39 +74,39 @@ class StudentInfo {
  */
 class Students {
     /**
-     * { var_description }
+     * { var_description }.
      */
     private StudentInfo[] info;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int num;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int size;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private StudentInfo[] vacancies;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int vacsize;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int urvac;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int bcvac;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int scvac;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int stvac;
     public Students(final int data, final int vacan,
@@ -124,7 +124,7 @@ class Students {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      sortedinfo  The sortedinfo
      *
@@ -183,7 +183,7 @@ class Students {
         return vacancies;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      stud  The stud
      */
@@ -195,7 +195,7 @@ class Students {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      */
     public void resize() {
         info = Arrays.copyOf(info, info.length * 2);
@@ -210,7 +210,7 @@ class Students {
         return info;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      inf   The inf
      */
@@ -226,6 +226,11 @@ class Students {
  * Class for solution.
  */
 public final class Solution {
+    /**
+     * { item_description }
+     */
+    private Solution() {
+    }
     /**
      * main Method.
      *
