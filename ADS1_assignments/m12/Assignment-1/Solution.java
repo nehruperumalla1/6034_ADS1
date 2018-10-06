@@ -37,7 +37,7 @@ class StudentInfo {
     /**
      * { var_description }.
      */
-    private static int DAYS = 30;
+    private static final int DAYS = 30;
 
     /**
      * Constructs the object.
