@@ -93,11 +93,25 @@ class Students {
      * { var_description }
      */
     private int vacsize;
+    /**
+     * { var_description }
+     */
     private int urvac;
+    /**
+     * { var_description }
+     */
     private int bcvac;
+    /**
+     * { var_description }
+     */
     private int scvac;
+    /**
+     * { var_description }
+     */
     private int stvac;
-    public Students(int data, int vacan, int urvc, int bvc, int svc, int stvc) {
+    public Students(final int data, final int vacan,
+        final int urvc, final int bvc, final int svc,
+        final int stvc) {
         num = data;
         info = new StudentInfo[num];
         size = 0;
@@ -116,7 +130,7 @@ class Students {
      *
      * @return     { description_of_the_return_value }
      */
-    public StudentInfo[] applications(StudentInfo[] sortedinfo) {
+    public StudentInfo[] applications(final StudentInfo[] sortedinfo) {
         int count = 0;
         while (count < vacancies.length) {
             while (urvac > 0 && count < vacancies.length) {
@@ -173,7 +187,7 @@ class Students {
      *
      * @param      stud  The stud
      */
-    public void add(StudentInfo stud) {
+    public void add(final StudentInfo stud) {
         if (size == info.length) {
             resize();
         }
@@ -200,10 +214,10 @@ class Students {
      *
      * @param      inf   The inf
      */
-    public void print(StudentInfo[] inf) {
+    public void print(final StudentInfo[] inf) {
         for (int i = 0; i < inf.length; i++) {
-            System.out.println(inf[i].getName() + "," +
-                inf[i].getMarks() + "," + inf[i].getCategory());
+            System.out.println(inf[i].getName() + ","
+                + inf[i].getMarks() + "," + inf[i].getCategory());
         }
     }
 }
@@ -211,13 +225,13 @@ class Students {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * main Method.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int studcount = Integer.parseInt(scan.nextLine());
         Merge sort = new Merge();
