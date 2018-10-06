@@ -14,14 +14,42 @@ class StudentInfo {
      * DOB.
      */
     private int[] dob;
-
+    /**
+     * { var_description }.
+     */
     private int sub1;
+    /**
+     * { var_description }.
+     */
     private int sub2;
+    /**
+     * { var_description }.
+     */
     private int sub3;
+    /**
+     * { var_description }.
+     */
     private int tmarks;
+    /**
+     * { var_description }.
+     */
     private String category;
+    /**
+     * { var_description }.
+     */
     private static int DAYS = 30;
 
+    /**
+     * Constructs the object.
+     *
+     * @param      n         { parameter_description }
+     * @param      b         { parameter_description }
+     * @param      s1        The s 1
+     * @param      s2        The s 2
+     * @param      s3        The s 3
+     * @param      totmarks  The totmarks
+     * @param      cat       The cat
+     */
     StudentInfo(String n, String b, int s1, int s2, int s3, int totmarks, String cat) {
         name = n;
         String[] dupdob = b.split("-");
@@ -36,20 +64,35 @@ class StudentInfo {
         category = cat;
     }
 
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Gets the marks.
+     *
+     * @return     The marks.
+     */
     public int getMarks() {
         return tmarks;
     }
 
+    /**
+     * Gets the category.
+     *
+     * @return     The category.
+     */
     public String getCategory() {
         return category;
     }
 
-    static Comparator<StudentInfo> comp = new Comparator<StudentInfo>() {
-        public int compare(StudentInfo s1, StudentInfo s2) {
+    public static Comparator<StudentInfo> comp = new Comparator<StudentInfo>() {
+        public int compare(final StudentInfo s1, final StudentInfo s2) {
             if (s2.tmarks - s1.tmarks != 0) {
                 return s2.tmarks - s1.tmarks;
             } else if (s2.sub3 - s1.sub3 != 0) {
@@ -61,7 +104,8 @@ class StudentInfo {
                     return s2.dob[2] - s1.dob[2];
                 } else {
                     int count = 2 * 2 * (2 + 1);
-                    return (((count - s1.dob[1]) * DAYS) - ((count - s2.dob[1]) * DAYS));
+                    return (((count - s1.dob[1]) * DAYS)
+                        - ((count - s2.dob[1]) * DAYS));
                 }
             }
         }
@@ -109,7 +153,17 @@ class Students {
      * { var_description }.
      */
     private int stvac;
-    public Students(final int data, final int vacan,
+    /**
+     * Constructs the object.
+     *
+     * @param      data   The data
+     * @param      vacan  The vacan
+     * @param      urvc   The urvc
+     * @param      bvc    The bvc
+     * @param      svc    The svc
+     * @param      stvc   The stvc
+     */
+    Students(final int data, final int vacan,
         final int urvc, final int bvc, final int svc,
         final int stvc) {
         num = data;
@@ -227,7 +281,7 @@ class Students {
  */
 public final class Solution {
     /**
-     * { item_description }
+     * { item_description }.
      */
     private Solution() {
     }
