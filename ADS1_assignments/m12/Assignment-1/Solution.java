@@ -50,7 +50,8 @@ class StudentInfo {
      * @param      totmarks  The totmarks
      * @param      cat       The cat
      */
-    StudentInfo(String n, String b, int s1, int s2, int s3, int totmarks, String cat) {
+    StudentInfo(final String n, final String b, final int s1,
+        final int s2, final int s3, final int totmarks, final String cat) {
         name = n;
         String[] dupdob = b.split("-");
         dob = new int[dupdob.length];
@@ -91,7 +92,10 @@ class StudentInfo {
         return category;
     }
 
-    public static Comparator<StudentInfo> comp = new Comparator<StudentInfo>() {
+    /**
+     * { var_description }.
+     */
+    static Comparator<StudentInfo> comp = new Comparator<StudentInfo>() {
         public int compare(final StudentInfo s1, final StudentInfo s2) {
             if (s2.tmarks - s1.tmarks != 0) {
                 return s2.tmarks - s1.tmarks;
