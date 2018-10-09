@@ -19,7 +19,7 @@ public final class Solution {
         MinPQ<Float> minpq = new MinPQ<Float>(count);
         MaxPQ<Float> maxpq = new MaxPQ<Float>(count);
         float median = 0.0f;
-        for (int i = 0; i < count + 1; i++) {
+        for (int i = 0; i < count; i++) {
             float input = Float.parseFloat(scan.nextLine());
             if (input > median) {
                 minpq.insert(input);
@@ -34,7 +34,7 @@ public final class Solution {
                 float input2 = minpq.delMin();
                 maxpq.insert(input2);
             }
-            if (minpq.size() == maxpq.size()) {
+            if (minpq.size() != maxpq.size()) {
                 median = (minpq.min() + maxpq.max()) / 2;
                 System.out.println(median);
             }
