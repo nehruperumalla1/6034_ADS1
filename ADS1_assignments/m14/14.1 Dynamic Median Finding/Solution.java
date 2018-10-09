@@ -34,7 +34,7 @@ public final class Solution {
                 float input2 = minpq.delMin();
                 maxpq.insert(input2);
             }
-            if (minpq.size() != maxpq.size()) {
+            if (minpq.size() == maxpq.size()) {
                 median = (minpq.min() + maxpq.max()) / 2;
                 System.out.println(median);
             }
