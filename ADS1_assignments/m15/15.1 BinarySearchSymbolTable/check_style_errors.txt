@@ -1,17 +1,4 @@
 Starting audit...
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:1:8: Unused import - java.util.Arrays. [UnusedImports]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:28:12: Parameter capacity should be final. [FinalParameters]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:42:21: Parameter key should be final. [FinalParameters]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:42:30: Parameter val should be final. [FinalParameters]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:43:11: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:67: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:96:29: Parameter key should be final. [FinalParameters]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:110:22: Parameter key should be final. [FinalParameters]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:136:22: Parameter key should be final. [FinalParameters]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:143: Line has trailing spaces. [RegexpSingleline]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:155:21: Parameter key should be final. [FinalParameters]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:189:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:195:29: Parameter args should be final. [FinalParameters]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:198: Line is longer than 80 characters (found 82). [LineLength]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:188: Class Solution should be declared as final. [FinalClass]
 Audit done.
-Checkstyle ends with 14 errors.
+Checkstyle ends with 1 errors.

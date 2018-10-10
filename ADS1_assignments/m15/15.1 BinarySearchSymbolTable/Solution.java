@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -25,7 +24,7 @@ class Tables<Key extends Comparable<Key>, Value> {
      *
      * @param      capacity  The capacity
      */
-    Tables(int capacity) {
+    Tables(final int capacity) {
         keys = (Key[]) new Comparable[capacity];
         values = (Value[]) new Object[capacity];
         size = 0;
@@ -39,8 +38,8 @@ class Tables<Key extends Comparable<Key>, Value> {
      * @param      key   The key
      * @param      val   The value
      */
-    public void put(Key key, Value val) {
-        if(size == 0) {
+    public void put(final Key key, final Value val) {
+        if (size == 0) {
             keys[size] = key;
             values[size] = val;
             size++;
@@ -65,7 +64,7 @@ class Tables<Key extends Comparable<Key>, Value> {
     }
 
     /**
-     * Size of the Symbol Table
+     * Size of the Symbol Table.
      *
      * @return     { Returns Integer value }
      */
@@ -93,7 +92,7 @@ class Tables<Key extends Comparable<Key>, Value> {
      *
      * @return     { Returns true if contains else false }
      */
-    public boolean contains(Key key) {
+    public boolean contains(final Key key) {
         int index = rank(key);
         return keys[index].compareTo(key) == 0;
     }
@@ -107,7 +106,7 @@ class Tables<Key extends Comparable<Key>, Value> {
      *
      * @return     { returns the value of given key }
      */
-    public Value get(Key key) {
+    public Value get(final Key key) {
         if (contains(key)) {
             int index = rank(key);
             return values[index];
@@ -133,14 +132,14 @@ class Tables<Key extends Comparable<Key>, Value> {
      *
      * @return     { Returns key smaller or equal to the given. }
      */
-    public Key floor(Key key) {
+    public Key floor(final Key key) {
         int index = rank(key);
         if (contains(key)) {
             return key;
         } else if (index == 0) {
             return null;
         }
-        return keys[index - 1];     
+        return keys[index - 1];
     }
 
     /**
@@ -152,7 +151,7 @@ class Tables<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
-    public int rank(Key key) {
+    public int rank(final Key key) {
         int lo = 0;
         int hi = size - 1;
         int mid = 0;
@@ -188,14 +187,21 @@ class Tables<Key extends Comparable<Key>, Value> {
  */
 public class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //Not USing this Constructor.
+    }
+    /**
      * Main Method for Symbol Table.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sca = new Scanner(System.in);
         String[] symbol = sca.nextLine().split(" ");
-         Tables<String, Integer> tab = new Tables<String, Integer>(symbol.length);
+         Tables<String, Integer> tab = new Tables<String, Integer>(
+            symbol.length);
         for (int i = 0; i < symbol.length; i++) {
             tab.put(symbol[i], i);
         }
