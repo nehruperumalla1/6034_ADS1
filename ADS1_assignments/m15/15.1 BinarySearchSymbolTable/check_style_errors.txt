@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:188: Class Solution should be declared as final. [FinalClass]
 Audit done.
-Checkstyle ends with 1 errors.
