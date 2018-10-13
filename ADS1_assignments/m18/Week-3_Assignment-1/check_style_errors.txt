@@ -1,0 +1,9 @@
+Starting audit...
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m18\Week-3_Assignment-1\Tables.java:1:8: Unused import - java.util.Scanner. [UnusedImports]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m18\Week-3_Assignment-1\Tables.java:8:4: Unused @param tag for '<Value>'. [JavadocType]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m18\Week-3_Assignment-1\Tables.java:34:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m18\Week-3_Assignment-1\Tables.java:165:8: Unused @param tag for 'key'. [JavadocMethod]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m18\Week-3_Assignment-1\Tables.java:169:31: Expected @param tag for 'val'. [JavadocMethod]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m18\Week-3_Assignment-1\Tables.java:186:5: Missing a Javadoc comment. [JavadocMethod]
+Audit done.
+Checkstyle ends with 6 errors.
