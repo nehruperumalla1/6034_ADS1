@@ -1,12 +1,31 @@
 import java.util.Scanner;
+/**
+ * Class for dynamic median finding.
+ */
 class DynamicMedianFinding {
+    /**
+     * Count Variable for PQ Size.
+     */
     private int count;
+    /**
+     * Scanner Object to take input.
+     */
     private Scanner scan;
+    /**
+     * Constructs the object.
+     *
+     * @param      countt  The countt
+     * @param      sca     The sca
+     */
     DynamicMedianFinding(int countt, Scanner sca) {
         count = countt;
         scan = sca;
     }
-
+    /**
+     * Finding the Dynamic Median.
+     * Complexity for insertion is O(LogN).
+     * Complexity for Deletion is O(LogN).
+     */
     public void dynMedianFin() {
         MinPQ<Float> minpq = new MinPQ<Float>(count);
         MaxPQ<Float> maxpq = new MaxPQ<Float>(count);
