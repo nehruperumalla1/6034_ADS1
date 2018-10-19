@@ -1,6 +1,2 @@
 Starting audit...
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m14\14.1 Dynamic Median Finding\Solution.java:20:26: Parameter countt should be final. [FinalParameters]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m14\14.1 Dynamic Median Finding\Solution.java:20:38: Parameter sca should be final. [FinalParameters]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m14\14.1 Dynamic Median Finding\Solution.java:80:67: ',' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 3 errors.

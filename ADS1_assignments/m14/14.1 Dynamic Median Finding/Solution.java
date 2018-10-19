@@ -17,7 +17,7 @@ class DynamicMedianFinding {
      * @param      countt  The countt
      * @param      sca     The sca
      */
-    DynamicMedianFinding(int countt, Scanner sca) {
+    DynamicMedianFinding(final int countt, final Scanner sca) {
         count = countt;
         scan = sca;
     }
@@ -77,7 +77,7 @@ public final class Solution {
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int count = Integer.parseInt(scan.nextLine());
-        DynamicMedianFinding dmf = new DynamicMedianFinding(count,scan);
+        DynamicMedianFinding dmf = new DynamicMedianFinding(count, scan);
         dmf.dynMedianFin();
     }
 }
