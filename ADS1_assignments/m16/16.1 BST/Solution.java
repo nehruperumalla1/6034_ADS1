@@ -197,8 +197,10 @@ class Bst<Value> {
 
     /**
      * Implementing Get Method.
-     * Complexity of Get Method is O(N).
-     * It iterates through al the Nodes to get the Value.
+     * Complexity of Get Method is O(logN).
+     * It iterates through the Nodes according to search Node.
+     * If the Search Node is Greater than mid it iterates through right
+     * side Eleements.
      *
      * @param      bobj  The bobj
      *
