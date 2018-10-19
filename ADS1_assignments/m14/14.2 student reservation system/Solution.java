@@ -29,6 +29,8 @@ class Students {
     }
     /**
      * { Add Object to Object Array }.
+     * Complexity of Add Method is O(1).
+     * Because adding the Element at particular index.
      *
      * @param      stud  The stud
      */
@@ -41,6 +43,7 @@ class Students {
 
     /**
      * { Resizing the Array }.
+     * Complexity for Resizing Array is O(N).
      */
     public void resize() {
         info = Arrays.copyOf(info, info.length * 2);
@@ -70,7 +73,7 @@ class CategoryCriteria {
     /**
      * { Object for Merge Class }.
      */
-    private Merge mergee = new Merge();
+    private InsSort isort = new InsSort();
     /**
      * { No.of applied }.
      */
@@ -139,6 +142,8 @@ class CategoryCriteria {
 
     /**
      * { Checks whether the Object contained in Array }.
+     * Complexity of Contains is O(N).
+     * It Iterates through out the Array w.r.t its size.
      *
      * @param      student  The student
      *
@@ -147,7 +152,6 @@ class CategoryCriteria {
     private boolean contains(final StudentInfo student) {
         for (int i = 0; i < asize; i++) {
             if (catSorted[i].getName().equals(student.getName())) {
-                // System.out.println(catSorted[i].getName());
                 return true;
             }
         }
@@ -155,6 +159,11 @@ class CategoryCriteria {
     }
     /**
      * { Categorising According to Criteria }.
+     * Complexity of catCriteria is O(N ^ 2).
+     * Iterates through array if Category matches it places
+     * the Student in the array.
+     * After placing the students in array it sorts using insertion sort.
+     * So, the worst case complexity of Insertion Sort is O(N ^ 2).
      */
     public void catCriteria() {
         for (int i = 0; i < urevacancies; i++) {
@@ -189,9 +198,9 @@ class CategoryCriteria {
                 }
             }
         }
-        mergee.insertionSort(
+        isort.insertionSort(
             catSorted, 0, catSorted.length - 1, StudentInfo.comp);
-        mergee.print(catSorted);
+        isort.print(catSorted);
     }
 }
 
@@ -207,13 +216,15 @@ public final class Solution {
     }
     /**
      * main Method.
+     * Complexity of Solution is O(N).
+     * It creates the object based upon the Student count mentioned initially.
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int studcount = Integer.parseInt(scan.nextLine());
-        Merge sort = new Merge();
+        InsSort sort = new InsSort();
         int vacancies = Integer.parseInt(scan.nextLine());
         int unrevacancies = Integer.parseInt(scan.nextLine());
         int bcvacancies = Integer.parseInt(scan.nextLine());

@@ -2,11 +2,11 @@ import java.util.*;
 /**
  * Class for merge.
  */
-class Merge {
+class InsSort {
 	/**
 	 * Constructs the object.
 	 */
-	Merge() {
+	InsSort() {
 	}
 
 	/**
