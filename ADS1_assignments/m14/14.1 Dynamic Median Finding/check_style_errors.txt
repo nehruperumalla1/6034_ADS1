@@ -1,2 +1,11 @@
 Starting audit...
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m14\14.1 Dynamic Median Finding\Solution.java:2: Missing a Javadoc comment. [JavadocType]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m14\14.1 Dynamic Median Finding\Solution.java:3:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m14\14.1 Dynamic Median Finding\Solution.java:4:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m14\14.1 Dynamic Median Finding\Solution.java:5:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m14\14.1 Dynamic Median Finding\Solution.java:5:26: Parameter countt should be final. [FinalParameters]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m14\14.1 Dynamic Median Finding\Solution.java:5:38: Parameter sca should be final. [FinalParameters]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m14\14.1 Dynamic Median Finding\Solution.java:10:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m14\14.1 Dynamic Median Finding\Solution.java:63:67: ',' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
+Checkstyle ends with 8 errors.
