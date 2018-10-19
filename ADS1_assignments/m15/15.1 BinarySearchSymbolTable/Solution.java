@@ -149,7 +149,7 @@ class Tables<Key extends Comparable<Key>, Value> {
      *
      * @param      key   The key
      *
-     * @return     { description_of_the_return_value }
+     * @return     { Returns the Index of the Element }.
      */
     public int rank(final Key key) {
         int lo = 0;
@@ -170,7 +170,7 @@ class Tables<Key extends Comparable<Key>, Value> {
 
     /**
      * Delete the Min Key.
-     * Complexity is O(N)
+     * Complexity is O(N).
      * It iterates through out the Size.
      */
     public void deleteMin() {
