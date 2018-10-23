@@ -395,14 +395,11 @@ class BstOperations<Value> {
             if (root.left == null && root.right == null) {
                 root = deleteMin(root);
             } else if (root.left == null) {
-                root.right = deleteMin(root);
                 root = root.right;
             } else if (root.right == null) {
-                root.left = deleteMax(root);
                 root = root.left;
             } else {
-                Node temp = min(root.right);
-                root = temp;
+                root = min(root.right);
                 deleteMin(root.right);
             }
         }
