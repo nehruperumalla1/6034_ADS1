@@ -82,7 +82,8 @@ class BstOperations<Value> {
     /**
      * Puts the Book of Node Type and Value in Node.
      * Puts in Bainry Search Tree using binary search.
-     * Complexity of Put is O(logN).
+     * Complexity of Put is h.
+     * Where h is height of the tree.
      *
      * @param      bookobj  The bookobj
      * @param      val      The value
@@ -93,7 +94,8 @@ class BstOperations<Value> {
     /**
      * Puts the Book of Node Type and Value in Node.
      * Puts in Bainry Search Tree using binary search.
-     * Complexity of Put is O(logN).
+     * Complexity of Put is h.
+     * Where h is height of the tree.
      *
      * @param      root     The root
      * @param      bookobj  The bookobj
@@ -151,7 +153,8 @@ class BstOperations<Value> {
     }
     /**
      * Gets the Value of given Object.
-     * Complexity of get is O(logN).
+     * Complexity of get is is h.
+     * Where h is height of the tree.
      *
      * @param      bookobj  The bookobj
      *
@@ -180,12 +183,13 @@ class BstOperations<Value> {
     }
     /**
      * Gets the Value of given Object.
-     * Complexity of get is O(logN).
+     * Complexity of get is is h.
+     * Where h is height of the tree.
      *
      * @param      root     The root
      * @param      bookobj  The bookobj
      *
-     * @return     { description_of_the_return_value }
+     * @return     { Returns the Required Node }
      */
     private Node get(final Node root, final Node bookobj) {
         if (bookobj == null) {
@@ -206,7 +210,8 @@ class BstOperations<Value> {
     /**
      * Floor Method.
      * It is used to find the item which is less than or equal to given item.
-     * Complexity of Floor is O(logN).
+     * Complexity of Floor is h.
+     * Where h is height of the tree.
      *
      * @param      bookobj  The bookobj
      */
@@ -221,7 +226,8 @@ class BstOperations<Value> {
     /**
      * Floor Method.
      * It is used to find the item which is less than or equal to given item.
-     * Complexity of Floor is O(logN).
+     * Complexity of Floor is h.
+     * Where h is height of the tree.
      *
      * @param      bookobj  The bookobj
      * @param      x        { Node }
@@ -251,7 +257,8 @@ class BstOperations<Value> {
     /**
      * Maximum Method.
      * It is used to findout the Max node in tree.
-     * Complexity is O(logN).
+     * Complexity is is h.
+     * Where h is height of the tree.
      */
     public void max() {
         Node x = max(head);
@@ -262,7 +269,8 @@ class BstOperations<Value> {
     /**
      * Maximum Method.
      * It is used to findout the Max node in tree.
-     * Complexity is O(logN).
+     * Complexity is h.
+     * Where h is height of the tree.
      *
      * @param      root  The root
      *
@@ -281,7 +289,8 @@ class BstOperations<Value> {
     /**
      * Minimum Method.
      * It is used to findout the min node in tree.
-     * Complexity is O(logN).
+     * Complexity is h.
+     * Where h is height of the tree.
      */
     public void min() {
         Node x = min(head);
@@ -292,7 +301,8 @@ class BstOperations<Value> {
     /**
      * Minimum Method.
      * It is used to findout the min node in tree.
-     * Complexity is O(logN).
+     * Complexity is h.
+     * Where h is height of the tree.
      *
      * @param      root  The root
      *
@@ -408,7 +418,8 @@ class BstOperations<Value> {
     /**
      * Ceiling Method.
      * It finds out node which is larger than the given node.
-     * The complexity of Ceiling is O(logN).
+     * The complexity of Ceiling is h.
+     * Where h is height of the tree.
      *
      * @param      bookobj  The bookobj
      */
@@ -423,7 +434,8 @@ class BstOperations<Value> {
     /**
      * Ceiling Method.
      * It finds out node which is larger than the given node.
-     * The complexity of Ceiling is O(logN).
+     * The complexity of Ceilingis h.
+     * Where h is height of the tree.
      *
      * @param      bookobj  The bookobj
      * @param      root     The root
@@ -452,7 +464,8 @@ class BstOperations<Value> {
     }
     /**
      * Select the particular Node at given index.
-     * Complexity of select is O(logN).
+     * Complexity of select is h.
+     * Where h is height of the tree.
      *
      * @param      value  The value
      */
@@ -462,7 +475,8 @@ class BstOperations<Value> {
     }
     /**
      * Select the particular Node at given index.
-     * Complexity of select is O(logN).
+     * Complexity of select is h.
+     * Where h is height of the tree.
      *
      * @param      val   The value
      * @param      root  The root
@@ -495,11 +509,16 @@ public final class Solution {
     /**
      * Main method to Implement Binary Search Tree API.
      * Implementing put, get methods.
-     * Complexity of Put is O(logN).
-     * Complexity of Get is O(logN).
-     * Complexity of floor is O(logN).
-     * Complexity of ceiling is O(logN).
-     * Complexity of select is O(logN).
+     * Complexity of Put is h.
+     * Where h is height of the tree.
+     * Complexity of Get is h.
+     * Where h is height of the tree.
+     * Complexity of floor is h.
+     * Where h is height of the tree.
+     * Complexity of ceiling is h.
+     * Where h is height of the tree.
+     * Complexity of select is h.
+     * Where h is height of the tree.
      *
      * @param      args  The arguments
      */
