@@ -90,13 +90,12 @@ class Query {
             System.out.println(stud.getName());
         }
     }
-
     /**
      * Checking Greater Elements.
      * Here rank and select performs.
      * In Worst case complexity will be O(N).
      * In Average case logN.
-     * 
+     *
      * @param      m1    The m 1
      */
     public void checkGE(final Double m1) {
