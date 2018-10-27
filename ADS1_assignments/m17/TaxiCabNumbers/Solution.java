@@ -39,6 +39,7 @@ class CubeSum implements Comparable<CubeSum> {
 
     /**
      * Gets the vali.
+     * Complexity is O(1).
      *
      * @return     The vali.
      */
@@ -48,6 +49,7 @@ class CubeSum implements Comparable<CubeSum> {
 
     /**
      * Gets the valj.
+     * Complexity is O(1).
      *
      * @return     The valj.
      */
@@ -56,6 +58,7 @@ class CubeSum implements Comparable<CubeSum> {
     }
     /**
      * Gets the sum.
+     * Complexity is O(1).
      *
      * @return     The sum.
      */
