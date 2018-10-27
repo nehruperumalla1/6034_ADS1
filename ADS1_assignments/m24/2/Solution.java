@@ -145,9 +145,10 @@ public final class Solution {
         Scanner sca = new Scanner(System.in);
         BST<Double, Student> binary = new BST<Double, Student>();
         int count = Integer.parseInt(sca.nextLine());
+        Student obj;
         while (count-- > 0) {
             String[] input = sca.nextLine().split(",");
-            Student obj = new Student(Integer.parseInt(input[0]), input[1],
+            obj = new Student(Integer.parseInt(input[0]), input[1],
                 Double.parseDouble(input[2]));
             binary.put(Double.parseDouble(input[2]), obj);
         }
