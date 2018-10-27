@@ -135,6 +135,7 @@ public final class Solution {
     private Solution() { }
     /**
      * Main Method.
+     * COmplexity of Main Method is O(N).
      * Here it inserts and check elements.
      * For checking between elements worst case is N, avg case is logN.
      * For checking lesser than element worst case is N, avg case is logN.
