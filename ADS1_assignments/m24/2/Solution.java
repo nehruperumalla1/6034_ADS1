@@ -86,7 +86,6 @@ class Query {
             Student stud = binary.get(f);
             System.out.println(stud.getName());
         }
-        
     }
 
     /**
@@ -137,7 +136,8 @@ public final class Solution {
         int count = Integer.parseInt(sca.nextLine());
         while (count-- > 0) {
             String[] input = sca.nextLine().split(",");
-            Student obj = new Student(Integer.parseInt(input[0]), input[1], Double.parseDouble(input[2]));
+            Student obj = new Student(Integer.parseInt(input[0]), input[1],
+                Double.parseDouble(input[2]));
             binary.put(Double.parseDouble(input[2]), obj);
         }
         int count1 = Integer.parseInt(sca.nextLine());
@@ -146,7 +146,8 @@ public final class Solution {
             String[] input = sca.nextLine().split(" ");
             switch (input[0]) {
                 case "BE":
-                    query.checkBE(Double.parseDouble(input[1]), Double.parseDouble(input[2]));
+                    query.checkBE(Double.parseDouble(input[1]),
+                        Double.parseDouble(input[2]));
                 break;
                 case "GE":
                     query.checkGE(Double.parseDouble(input[1]));

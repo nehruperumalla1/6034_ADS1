@@ -1,6 +1,2 @@
 Starting audit...
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m24\2\Solution.java:89: Line has trailing spaces. [RegexpSingleline]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m24\2\Solution.java:140: Line is longer than 80 characters (found 106). [LineLength]
-[ERROR] F:\MSIT\ADS1\6034_ADS1\ADS1_assignments\m24\2\Solution.java:149: Line is longer than 80 characters (found 94). [LineLength]
 Audit done.
-Checkstyle ends with 3 errors.
