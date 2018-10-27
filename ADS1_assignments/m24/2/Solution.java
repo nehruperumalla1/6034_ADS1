@@ -76,6 +76,9 @@ class Query {
 
     /**
      * Checking Between Elements.
+     * Here iterable keys performs.
+     * In Worst case complexity will be O(N).
+     * In Average case logN.
      *
      * @param      m1    The m 1
      * @param      m2    The m 2
@@ -90,7 +93,10 @@ class Query {
 
     /**
      * Checking Greater Elements.
-     *
+     * Here rank and select performs.
+     * In Worst case complexity will be O(N).
+     * In Average case logN.
+     * 
      * @param      m1    The m 1
      */
     public void checkGE(final Double m1) {
@@ -104,6 +110,9 @@ class Query {
 
     /**
      * Checking Lesser Elements.
+     * Here rank and select performs.
+     * In Worst case complexity will be O(N).
+     * In Average case logN.
      *
      * @param      m1    The m 1
      */
@@ -127,7 +136,10 @@ public final class Solution {
     private Solution() { }
     /**
      * Main Method.
-     *
+     * Here it inserts and check elements.
+     * For checking between elements worst case is N, avg case is logN.
+     * For checking lesser than element worst case is N, avg case is logN.
+     * For checking greater than element worst case is N, avg case is logN.
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
