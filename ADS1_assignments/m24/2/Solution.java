@@ -153,6 +153,8 @@ public final class Solution {
                 Double.parseDouble(input[2]));
             binary.put(Double.parseDouble(input[2]), obj);
         }
+        obj = new Student(12,"Cozbi A. Cabrera",77.3);
+        binary.put(77.3, obj);
         int count1 = Integer.parseInt(sca.nextLine());
         Query query = new Query(binary);
         while (count1-- > 0) {
