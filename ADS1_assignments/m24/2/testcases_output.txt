@@ -1,4 +1,4 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 Clark
 Rivest
@@ -6,7 +6,6 @@ Dan
 Abegg
 Your Output: 
 Clark
-Cozbi A. Cabrera
 Rivest
 Dan
 Abegg
@@ -61,7 +60,7 @@ Brian Caffrey
 Your Output: 
 Clark
 Rhian Cahill
-Cozbi A. Cabrera
+Sasha Cagen
 Rivest
 Access
 Rachel Caine
@@ -218,7 +217,7 @@ Abegg
 Brian Caffrey
 Clark
 Rhian Cahill
-Cozbi A. Cabrera
+Sasha Cagen
 Rivest
 Steve Cafferty
 Hank
@@ -1167,7 +1166,6 @@ Alex Palmer
 David Hagedorn
 M MacCallum
 James B. Maas
-Cozbi A. Cabrera
 Manoj Pandey
 John W. Jacobs
 Thomas Paine
@@ -1348,7 +1346,6 @@ Alex Palmer
 David Hagedorn
 M MacCallum
 James B. Maas
-Cozbi A. Cabrera
 Manoj Pandey
 John W. Jacobs
 Thomas Paine
@@ -1541,7 +1538,6 @@ Alex Palmer
 David Hagedorn
 M MacCallum
 James B. Maas
-Cozbi A. Cabrera
 Manoj Pandey
 John W. Jacobs
 Thomas Paine
